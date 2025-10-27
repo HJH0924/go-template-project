@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package user.v1;
+
+// UserService 提供用户服务
+service UserService {
+  // SayHello 打招呼
+  rpc SayHello(SayHelloRequest) returns (SayHelloResponse) {}
+}
+
+// SayHelloRequest 打招呼请求
+message SayHelloRequest {
+  // 名字
+  string name = 1;
+}
+
+// SayHelloResponse 打招呼响应
+message SayHelloResponse {
+  // 问候消息
+  string message = 1;
+}
